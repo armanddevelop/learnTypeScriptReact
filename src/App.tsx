@@ -1,25 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Counter} from "./Components/Counter";
+import { CounterBy } from './Components/CounterBy';
+import { CounterEffect } from './Components/CounterEffect';
+import { CounterHook } from './Components/CounterHook';
+import { CounterReducer } from "./counter-reducer/CounterReducer";
+//import { CounterReducerComp } from './Components/CounterReducerComp';
+
+
 
 function App() {
+  const title = "Counter";
+  const titleCounterBy = "CounterBy";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <h1>React reinforcement</h1>
+     <hr/>
+     <h2>Counter Component</h2>
+     <Counter initialValue={15} title={title}/>
+     <hr/>
+     <h2>Counter By Component</h2>
+     <CounterBy title={titleCounterBy}/>
+     <h2>Counter Effect</h2>
+      <CounterEffect/>
+      <h2>Counter Hook</h2>
+      <CounterHook/>
+      <h2>Counter Reducer Component</h2>
+      <CounterReducer/>
+    </>
   );
 }
 
